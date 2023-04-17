@@ -1,0 +1,135 @@
+@use "@/styles/config/bp";
+@use "@/styles/components";
+@use "@/styles/config/colors";
+
+.title {
+  @extend .AppTitle;
+  margin-block: 20px;
+}
+
+input[type="radio"] {
+  display: none;
+  appearance: none;
+  visibility: hidden;
+}
+
+.PizzasGrid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+  gap: 30px;
+  place-content: center;
+
+  // li {
+  //   height: 100%;
+  // }
+}
+
+.Pizza {
+  height: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  width: 320px;
+
+  ._Title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+
+  ._Properties {
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: auto;
+  }
+
+  ._Dough,
+  ._Size {
+    display: flex;
+    align-items: center;
+  }
+
+  ._DoughType,
+  ._SizeValue {
+    &:has(input:checked) {
+      background-color: #fff;
+    }
+
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+  }
+
+  ._Actions {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 48px;
+  }
+
+  ._Price {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  ._AddButton {
+    flex: 1;
+  }
+
+  ._Description {
+    align-self: flex-start;
+    color: colors.$text-gray;
+  }
+}
+
+.Loader {
+  margin-inline: auto;
+}
+
+.ZeroPizzas {
+  font-size: 1.25rem;
+}
+
+.AddToCartAnimation {
+  position: fixed;
+  top: var(--initial-top);
+  left: var(--initial-left);
+  animation: add-to-cart-animation 500ms ease-out forwards;
+
+  @keyframes add-to-cart-animation {
+    0% {
+      scale: 1;
+    }
+    100% {
+      scale: 0.25;
+      opacity: 0;
+      top: 100vh;
+      left: 100vw;
+    }
+  }
+
+  @include bp.tablet {
+    @keyframes add-to-cart-animation {
+      0% {
+        scale: 1;
+      }
+      100% {
+        scale: 0.25;
+        opacity: 0;
+        top: 0;
+        left: 90vw;
+      }
+    }
+  }
+}

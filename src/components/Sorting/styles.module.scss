@@ -1,0 +1,41 @@
+.Sorting {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  max-width: fit-content;
+  margin-top: 20px;
+
+  ._SortType {
+    color: var(--accent-color);
+    border-bottom: 1px dashed currentColor;
+  }
+
+  ._SortDropdown {
+    background: #fff;
+    list-style: none;
+    position: absolute;
+    top: 120%;
+    right: -10%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #0002;
+    overflow: hidden;
+  }
+
+  ._SortDropdownButton {
+    padding: 12px 24px;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+      background-color: var(--accent-color-light);
+      color: var(--accent-color);
+    }
+  }
+
+  ._SortDuration {
+    &.rotated {
+      rotate: 180deg;
+    }
+  }
+}

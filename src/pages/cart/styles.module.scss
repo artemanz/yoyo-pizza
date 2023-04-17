@@ -1,0 +1,66 @@
+@use "@/styles/components";
+@use "@/styles/config/colors";
+
+.EmptyCart {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    max-width: 400px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    opacity: 0.5;
+  }
+}
+
+.TitleRow {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: 30px;
+}
+
+.Title {
+  @extend .AppTitle;
+}
+
+.ClearCart {
+  color: colors.$text-gray;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 300ms ease;
+
+  &:hover {
+    color: colors.$black;
+  }
+}
+
+.ItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.Summary {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.25rem;
+}
+
+.Cost {
+  font-weight: bold;
+  color: colors.$orange;
+}

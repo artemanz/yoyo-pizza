@@ -1,0 +1,69 @@
+@use "@/styles/config/colors";
+@use "@/styles/config/bp";
+
+.Item {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  row-gap: 20px;
+  column-gap: 40px;
+}
+
+.Image {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.InfoGroup {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+}
+
+.Info {
+  margin-left: 20px;
+}
+
+.InfoTitle {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.InfoProps {
+  color: colors.$text-gray;
+}
+
+.Actions {
+  padding-inline: 32px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.Price {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.RemoveButton {
+  border: 1px solid colors.$text-gray;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  color: colors.$text-gray;
+  line-height: 0;
+}
+
+@include bp.tablet {
+  .Item {
+    width: clamp(50%, 800px, 100%);
+    margin-inline: auto;
+  }
+  .InfoGroup {
+    flex-basis: 0;
+  }
+}

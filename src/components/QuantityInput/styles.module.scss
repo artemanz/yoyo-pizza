@@ -1,0 +1,23 @@
+.QuantityInput {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.Value {}
+
+.Action {
+  width: 30px;
+  height: 30px;
+  font-size: 1.25rem;
+  color: var(--accent-color);
+  font-weight: bold;
+
+  background: none;
+  border: 1px solid var(--accent-color);
+  border-radius: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

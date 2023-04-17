@@ -1,0 +1,52 @@
+@use "@/styles/config/bp";
+@use "@/styles/config/mixins" as *;
+
+.AppButton {
+  transition: 300ms ease;
+  transition-property: background-color, color;
+  padding: 12px 24px;
+  border-radius: 100px;
+
+  &.Outlined {
+    border: 1px solid var(--accent-color);
+
+    &:hover,
+    &:active,
+    &:focus {
+      @include hover {
+        background: var(--accent-color);
+        color: #fff;
+      }
+    }
+  }
+
+  &.Filled {
+    background: var(--accent-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 100px;
+  }
+}
+
+.MobileCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background: var(--accent-color);
+  width: 80px;
+  height: 80px;
+
+  position: fixed;
+  right: 2vw;
+  bottom: 2vh;
+  border: 2px solid #fff;
+
+  img {
+    width: 50%;
+  }
+
+  @include bp.tablet {
+    display: none;
+  }
+}

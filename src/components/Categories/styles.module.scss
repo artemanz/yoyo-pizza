@@ -1,0 +1,30 @@
+@use "@/styles/config/colors";
+
+.list {
+  z-index: 2;
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  margin-top: 32px;
+  padding-bottom: 16px;
+}
+
+.listItem {
+  button {
+    padding: 12px 28px;
+    border-radius: 2em;
+    background: #fff;
+
+    &:hover {
+      background-color: var(--gray-color);
+    }
+  }
+
+  &.active {
+    button {
+      background: var(--bg-category-active);
+      color: #fff;
+    }
+  }
+}

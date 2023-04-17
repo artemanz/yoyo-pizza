@@ -1,0 +1,17 @@
+$black: #232323;
+$yellow: #ffdf8c;
+$gray: #f6f6f6;
+$orange: #fe5f1e;
+$orange-light: lighten($yellow, 18%);
+$text-gray: hsl(0, 0%, 60%);
+
+:root {
+  --body-bg-color: #{$yellow};
+  --accent-color: #{$orange};
+  --accent-color-light: #{$orange-light};
+  --gray-color: #{$gray};
+  --black-color: #{$black};
+  --text-color: #{$black};
+  --text-gray-color: #{$gray};
+  --bg-category-active: #{$black};
+}

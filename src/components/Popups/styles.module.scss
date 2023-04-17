@@ -1,0 +1,24 @@
+@use "@/styles/config/colors";
+
+.PaymentPopup {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-content: center;
+
+  ._Message {
+    position: relative;
+    background: #fff;
+    z-index: 2;
+    padding: 60px;
+    border-radius: 10px;
+    border: 1px solid colors.$orange;
+  }
+}
+
+.Backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: hsl(0, 0%, 0%, 0.75);
+}
